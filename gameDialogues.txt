@@ -1,0 +1,14 @@
+///
+/// All game dialogues
+///
+
+Congratulations. You have obtained your first equipment: <b>the red beam</b>. Shoot at will at the direction you are facing by pressing the E button.
+Upon receiving the beam, a portal has appeared. What lies beyond it though is unknown...
+
+...
+.....
+The evil butterfly just died but... something just happened?!?!
+
+== LAST LINES == DONT USE ==
+== LAST LINES == DONT USE ==
+== LAST LINES == DONT USE ==
