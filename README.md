@@ -17,7 +17,7 @@ Currently known bugs:
 ---------------------
 ⇢ Top-left movement is not working.
 
-⇢ Beam can out of the map.
+⇢ Beam can get out of the map.
 
 ⇢ Player can get pushed out the map.
 
