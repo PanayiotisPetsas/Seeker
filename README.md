@@ -17,7 +17,7 @@ Currently known bugs:
 ---------------------
 ⇢ Top-left movement is not working.
 
-⇢ Beam can get out of the map.
+⇢ Beam can get out of the map. [FIXED]
 
 ⇢ Player can get pushed out the map.
 
@@ -38,6 +38,12 @@ To do list to finish the game:
 ⇢ Make treasure appear through hidden path.   [DONE]
 
 ⇢ Make one more level with smaller enemies and a bigger map. [CURRENTLY WORKING ON]
+
+  a. Create the sprites for the map [25% DONE]
+  
+  b. Create a "health kit" which heals the player back to max HP. [DONE]
+  
+  c. Create enemies and enemy behaviour in code [NEXT]
 
 ⇢ Finish the GameOver scene.
 
