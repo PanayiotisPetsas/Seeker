@@ -37,7 +37,7 @@ public class SceneManagerr : MonoBehaviour {
     {
         if (!gameOverScene.Equals(currentScene.name))
         {
-            if ((playerScript.playerHP <= 0) && playerIsDead == false)
+            if ((playerScript.currentHP <= 0) && playerIsDead == false)
             {
                 SceneManager.LoadScene("GameOver");
                 playerIsDead = true;
@@ -52,6 +52,7 @@ public class SceneManagerr : MonoBehaviour {
             //code for what happens when butterfly boss is dead
         }
     }
+
   //  public void PlayAgainButton()
    // {
     //    if(playAgainDone == false)

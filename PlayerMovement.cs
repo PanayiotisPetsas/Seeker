@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour {
     public Animator anim;
     public float bulletSpeed;
 
-    public float playerHP = 15;
+    public float currentHP = 15;
 
     public bool upAnim;
     public bool downAnim;
@@ -124,13 +124,22 @@ public class PlayerMovement : MonoBehaviour {
 
 	}
 
+    //Teleportations/Wraps:
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == "Portal")
         {
             // anim.SetTrigger("ContactWithPortal");
             SceneManager.LoadScene("SmallBossArea");
-            player.transform.position = new Vector2(0.92f, -6.302f); //Starting position;
+            player.transform.position = new Vector2(0.92f, -6.302f); //Starting position
+            player.gameObject.tag.Contains("Player");
+            cameraa.transform.parent = playerTransform.parent;
+        }
+
+        if(collision.gameObject.name == "portalToMuddyWorld")
+        {
+            SceneManager.LoadScene("MuddyWorld");
+            player.transform.position = new Vector2(-3.216f, -3.915f); //Starting position
             player.gameObject.tag.Contains("Player");
             cameraa.transform.parent = playerTransform.parent;
         }

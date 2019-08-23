@@ -7,8 +7,9 @@ public class HealthScript : MonoBehaviour {
     public Image healthBar;
     public static PlayerMovement playerScript;
     public GameObject player;
-    public static float startingHealth;
+    public float maxHP;
     public static float newHealth;
+    public static float oldHealth;
 
    // public int barHP = playerScript.playerHP / startingHealth;
    // public int newBarHP = newHealth / startingHealth;
@@ -16,16 +17,17 @@ public class HealthScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         playerScript = player.GetComponent<PlayerMovement>();
-        startingHealth = playerScript.playerHP;
-        newHealth = playerScript.playerHP;
-	}
+        maxHP = playerScript.currentHP;
+        newHealth = playerScript.currentHP;
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        if ((newHealth)  != (playerScript.playerHP))
+
+        if ((newHealth)  != (playerScript.currentHP))
         {
-            healthBar.fillAmount = playerScript.playerHP/startingHealth;
-            newHealth = playerScript.playerHP;
+            healthBar.fillAmount = playerScript.currentHP/maxHP;
+            newHealth = playerScript.currentHP;
         }
 
     }
