@@ -33,7 +33,7 @@ public class ButterflyBallAttack : MonoBehaviour {
     {
         if (col.gameObject.name == "purpleHair1")
         {
-            playerScript.playerHP -= 2;
+            playerScript.currentHP -= 2;
         }
     }
 }

@@ -38,7 +38,7 @@ public class ButterflyTrioAttackScript : MonoBehaviour {
     {
         if (col.gameObject.name == "purpleHair1")
         {
-            playerScript.playerHP = playerScript.playerHP - 3;
+            playerScript.currentHP = playerScript.currentHP - 3;
         }
     }
 }
