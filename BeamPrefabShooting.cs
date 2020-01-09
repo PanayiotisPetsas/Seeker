@@ -17,6 +17,9 @@ public class BeamPrefabShooting : MonoBehaviour
     public ButterflyBoss bossScript;
     public GameObject beamEffect;
 
+    public MonsterA monsterScript;
+    public GameObject monster;
+
     private int beamDamage = 3;
     public int lastDamage;
     public int newDamage;
@@ -28,6 +31,10 @@ public class BeamPrefabShooting : MonoBehaviour
 
     public Scene nameOfCurrentScene;
     public string butterflyScene = "SmallBossArea";
+    public string muddyWorldScene = "MuddyWorld";
+
+    public GameObject[] monsters;
+
     private void Start()
     {
 
@@ -45,6 +52,9 @@ public class BeamPrefabShooting : MonoBehaviour
         playerObject.GetComponent<PlayerMovement>();
         beamShooting = playerObject.GetComponent<BeamShooting>();
         boss = GameObject.FindWithTag("Boss");
+        monster = GameObject.FindGameObjectWithTag("Monsters");
+        //monsters = GameObject.FindGameObjectsWithTag("Monsters");
+
         //collidedBullet = beamShooting.beamClone;
         SceneChecker();
 
@@ -66,6 +76,18 @@ public class BeamPrefabShooting : MonoBehaviour
         {
             bossScript = boss.GetComponent<ButterflyBoss>();
         }
+
+
+        nameOfCurrentScene = SceneManager.GetActiveScene();
+        print("name of scene is: " + nameOfCurrentScene.name);
+        print("name of scene should be: " + muddyWorldScene);
+        if (nameOfCurrentScene.name == muddyWorldScene)
+        {
+            monsterScript = monster.GetComponent<MonsterA>();
+            print("name: " + monster.name);
+
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -95,6 +117,19 @@ public class BeamPrefabShooting : MonoBehaviour
             bossScript.HP -= beamDamage;
             Destroy(collidedBullet);
             effectClone = GameObject.Find("BeamEffect");
+            Destroy(effectClone, 1.0f);
+        }
+
+        if (collision.gameObject.tag == "Monsters")
+        {
+            //GameObject effectClone = (GameObject)Instantiate(beamEffect, transform.position, transform.rotation);
+            Instantiate(beamEffect, transform.position, transform.rotation);
+            Destroy(collidedBullet);
+            beamShooting.beamIsActive = false;
+            straightDirection = false;
+            this.monsterScript.monsterHealth -= beamDamage;
+            Destroy(collidedBullet);
+            effectClone = GameObject.FindWithTag("Effect");
             Destroy(effectClone, 1.0f);
         }
     }

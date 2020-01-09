@@ -36,6 +36,7 @@ public class healthKit : MonoBehaviour
             maxHealing = healthScript.maxHP;
             playerMovementScript.currentHP = maxHealing;
             Debug.Log("Max HP achieved at:" + maxHealing);
+
         }
     }
 }

@@ -14,6 +14,8 @@ public class TreasureScript : MonoBehaviour
     public GameObject beam;
     public BeamShooting beamShootingScript;
 
+    public HealthScript healthScript;
+
     public GameObject portalForMuddyWorld;
     // Start is called before the first frame update
     void Start()
@@ -33,7 +35,7 @@ public class TreasureScript : MonoBehaviour
         
     }
 
-    public void ChooseOptionA()
+    public void ChooseOptionA() //Max HP
     {
         playerMovementScript.currentHP += 25;
         Destroy(treasure);
@@ -42,7 +44,7 @@ public class TreasureScript : MonoBehaviour
         Time.timeScale = 1.0f;
     }
 
-    public void ChooseOptionB()
+    public void ChooseOptionB() // Speed and damage
     {
         playerMovementScript.speed += 0.01f;
         beamShootingScript = beam.GetComponent<BeamShooting>();
