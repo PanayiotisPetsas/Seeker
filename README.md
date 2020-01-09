@@ -7,9 +7,9 @@ Genre: 2D top-down veiw adventure game
 
 Current version: 0.7
 
-Current number of scenes: 3 - IntroductionScene, ButterflyBossArea, GameOverScene
+Current number of scenes: 3 - IntroductionScene, ButterflyBossArea, MuddyWorld, GameOverScene
 
-Current number of scripts: 19
+Current number of scripts: 22
 
 
 
