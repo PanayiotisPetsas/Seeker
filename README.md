@@ -5,7 +5,7 @@ Title of the game: Seeker (Title might change)
 
 Genre: 2D top-down veiw adventure game
 
-Current version: 0.6
+Current version: 0.7
 
 Current number of scenes: 3 - IntroductionScene, ButterflyBossArea, GameOverScene
 
@@ -19,11 +19,11 @@ Currently known bugs:
 
 ⇢ Beam can get out of the map. [FIXED]
 
-⇢ Player can get pushed out the map.
+⇢ Player can get pushed out the map. [FIXED] 
 
-⇢ Beam effects do not destroy themselves after the effect is finished.
+⇢ Beam effects do not destroy themselves after the effect is finished. [They stay invisible in the object hierarchy]
 
-⇢ Game sometimes wont pause with 'Z'.
+⇢ Game sometimes wont pause with 'Z'. [Occurs once the player has left the first scene]
 
 ⇢ When player speed is too high then he can sometimes run over walls   [FIXED]
 
@@ -39,13 +39,13 @@ To do list to finish the game:
 
 ⇢ Make one more level with smaller enemies and a bigger map. [CURRENTLY WORKING ON]
 
-  —⇢ a. Create the sprites for the map [25% DONE]
+  —⇢ a. Create the sprites for the map [50% DONE]
   
   —⇢ b. Create a "health kit" which heals the player back to max HP. [DONE]
   
-  —⇢ c. Create enemies and enemy behaviour in code [NEXT]
+  —⇢ c. Create enemies and enemy behaviour in code [DONE]
 
-⇢ Finish the GameOver scene.
+⇢ Finish the GameOver scene.[75% DONE]
 
 ⇢ (optional, depends on time left) Make inventory
 
